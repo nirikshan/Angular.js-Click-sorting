@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular Two Way Data Binding .</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body  ng-app="Nirikshan_ko_app">
+  <div ng-controller="MyContRollEr">
+      <table border="2">
+   	    <tr>
+   	   	   <td ng-click="click_k('Asc')" style="background-color:lightgray; cursor:pointer;">
+   	   	       Programming Language:
+   	   	      <span style="color:red; font-size:9px; cursor:pointer;">{{up}}</span>
+   	   	   </td>
+   	   	   <td>Percentage:</td>
+   	   	   <td>Salary:</td>
+   	   	   <td>People:</td>
+   	   	   <td>Started Date:</td>
+   	    </tr>
+   	     <tr ng-repeat="data in info | orderBy:ordering">
+   	   	   <td>{{data.pl}}</td>
+   	   	   <td>{{data.percent}}</td>
+   	   	   <td>{{data.salary |currency:'Rs.'}}</td>
+   	   	   <td>{{data.people | number :2}}</td>
+   	   	   <td>{{data.date | date:"yyyy/MM/dd"}}</td>
+   	    </tr>
+      </table>
+      <br>
+  </div>
+  <footer>
+  	<h5>By: Nirikshan (Dj Programmer).</h5>
+  	<a href="https://www.facebook.com/xprin.bd">https://www.facebook.com/xprin.bd</a>
+  </footer>
+</body>
+</html>
